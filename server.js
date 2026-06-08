@@ -17,6 +17,9 @@ app.use('/productos', require('./routes/productos.routes.js'));
 app.use('/clientes',require('./routes/clientes.routes.js'));
 app.use('/ventas', require('./routes/ventas.routes.js'));
 
+// Autenticacion
+app.use('/auth', require('./routes/auth.js'));
+
 // Puerto e inicio del servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
